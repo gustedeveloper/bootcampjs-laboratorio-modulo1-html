@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
+* {
     box-sizing: border-box;
     font-family: 'Montserrat';
 }
@@ -50,24 +50,35 @@ h2::first-letter {
 .product-img-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    padding: 16px;
     place-items: center;
+    padding: 0px 64px 0px 64px;
 }
 
 .product > img {
     border-radius: 3%;
+    width: 100%;
 }
 
 .product {
     padding: 16px;
+    width: 100%;
 }
 
 .product-info {
+    display: flex;
+    justify-content: space-between;
     padding: 16px;
 }
 
 .product-price {
     font-weight: bold;
-    justify-content: flex-end;
+
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #212429;
+    
+}
+
