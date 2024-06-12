@@ -3,6 +3,9 @@
 * {
     box-sizing: border-box;
     font-family: 'Montserrat';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -19,12 +22,17 @@
 }
 
 .menu-burguer {
-    padding-left: 32px;
+    padding: 0px 32px 0px 32px;
+}
+
+.nav-sections, .nav-icons {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .nav-sections > a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     color: #212429;
     padding: 8px;
 }
@@ -36,11 +44,17 @@
     padding: 32px;
 }
 
+.main-container {
+        width: 1280px;
+        margin: 0 auto;
+}
+
 h2 {
     position: relative;
-    padding-top: 100px;
-    padding-left: 32px;
-    font-size: 32px;
+    padding-top: 110px;
+    padding-left: 16px;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 h2::first-letter {
@@ -60,7 +74,7 @@ h2::first-letter {
 }
 
 .product {
-    padding: 16px;
+    padding: 32px;
     width: 100%;
 }
 
@@ -68,6 +82,7 @@ h2::first-letter {
     display: flex;
     justify-content: space-between;
     padding: 16px;
+    font-size: 14px;
 }
 
 .product-price {
@@ -76,9 +91,41 @@ h2::first-letter {
 }
 
 .footer {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #212429;
-    
+    padding: 32px;
+}
+
+.footer > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer > div > a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.footer .icon {
+    border-radius: 50%; 
+    padding: 8px;
+    background-color: #fff; 
+    border: 2px solid #000; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+@media (max-width: 1279px) and (min-width: 920px) {
+    .main-container {
+        width: 100%;
+    }
 }
 
