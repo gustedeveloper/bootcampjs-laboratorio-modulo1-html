@@ -3,12 +3,11 @@
 * {
     box-sizing: border-box;
     font-family: 'Montserrat';
-    font-size: 16px;
     margin: 0;
-    padding: 0;
 }
 
 .navbar {
+    height: 80px;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -27,31 +26,27 @@
 
 .nav-sections, .nav-icons {
     display: flex;
-    flex-wrap: nowrap;
 }
 
 .nav-sections > a {
     text-decoration: none;
-    font-size: 1rem;
     color: #212429;
     padding: 8px;
 }
 
-.nav-icons {
-    padding-right: 32px;
-}
-.nav-icons > .icon {
+.nav-icons > img {
     padding: 32px;
 }
 
-.main-container {
-        width: 1280px;
-        margin: 0 auto;
-}
+/*.main-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 32px 0px 32px;
+}*/
 
 h2 {
     padding-top: 110px;
-    padding-left: 16px;
+    padding-left: 32px;
     font-size: 1.5rem;
     font-weight: 800;
 }
@@ -74,7 +69,6 @@ h2::first-letter {
 
 .product {
     padding: 32px;
-    width: 100%;
 }
 
 .product-info {
@@ -92,6 +86,7 @@ h2::first-letter {
 .footer {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     top: 0;
     left: 0;
@@ -122,24 +117,33 @@ h2::first-letter {
     align-items: center;
 }
 
-@media (max-width: 1279px) and (min-width: 920px) {
-    .main-container {
-        width: 100%;
+@media (min-width: 1280px) {
+    
+    .product {
+        width: 77%;
+    }
+
+    .product-info {
+        font-size: 18px;
+    }
+    
+}
+
+@media (min-width: 921px) and (max-width: 1067px ) {
+
+    .nav-sections > a {
+        font-size: 12px;
+    }
+
+    .nav-icons {
+        height: 85px;
     }
 }
 
-@media (max-width: 920px) and (min-width: 300px) {
-    body {
-        width: 100%;
-    }
-
+@media (max-width: 920px) {
     .navbar {
         justify-content: center;
-        padding: 32px;
-    }
-    
-    .menu-burguer {
-        width: 120px;
+        padding: 16px;
     }
 
     .nav-sections, .nav-icons {
@@ -147,27 +151,37 @@ h2::first-letter {
     }
 
     h2 {
-        padding-top: 150px;
-        padding-left: 32px;
-        font-size: 3rem;
+        text-align: center;
+        padding-top: 100px;
+        padding-left: 0;
+        font-size: 2rem;
         font-weight: 700;
     }
 
-    .main-container {
-        width: 720px;
-    }
-
     .product {
-        width: 70%;
+        width: 60%;
     }
 
     .product-img-container {
         grid-template-columns: repeat(1, 1fr);
-        place-items: center;
+    }
+
+    .product-info {
+        font-size: 1.2rem;
     }
 
     .footer {
-        width: 100%;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .footer > div {
+        border-bottom: 1px solid white;
+        padding: 32px 0px 16px 0px;
+    }
+
+    .footer > div > a {
+        font-weight: bold;
     }
     
 
