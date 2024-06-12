@@ -1,4 +1,6 @@
-# Entrega Módulo 1 - HTML
+# Bootcamp JavaScript 2 - Lemoncode
+
+## Laboratorio Módulo 1 - HTML
 
 Este proyecto es parte del Bootcamp de Javascript de Lemoncode y representa la segunda entrega correspondiente al Módulo 1 de HTML. El objetivo de esta entrega es aplicar los conocimientos adquiridos sobre HTML y CSS para construir una página web que presenta una tienda de moda online.
 
