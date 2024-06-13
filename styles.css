@@ -18,6 +18,7 @@
     background-color: white;
     border-bottom: 1px solid black;
     z-index: 1000;
+    padding: 16px;
 }
 
 .menu-burguer {
@@ -38,12 +39,6 @@
     padding: 32px;
 }
 
-/*.main-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0px 32px 0px 32px;
-}*/
-
 h2 {
     padding-top: 110px;
     padding-left: 32px;
@@ -62,25 +57,27 @@ h2::first-letter {
     padding: 0px 64px 0px 64px;
 }
 
-.product > img {
-    border-radius: 3%;
-    width: 100%;
-}
 
 .product {
     padding: 32px;
 }
 
+.product > img {
+    border-radius: 3%;
+    width: 100%;
+}
+
 .product-info {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(1 auto);
     padding: 16px;
-    font-size: 14px;
+
 }
 
 .product-price {
     font-weight: bold;
-
+    grid-column: 2 / 3; 
+    justify-self: end;
 }
 
 .footer {
@@ -117,18 +114,6 @@ h2::first-letter {
     align-items: center;
 }
 
-@media (min-width: 1280px) {
-    
-    .product {
-        width: 77%;
-    }
-
-    .product-info {
-        font-size: 18px;
-    }
-    
-}
-
 @media (min-width: 921px) and (max-width: 1067px ) {
 
     .nav-sections > a {
@@ -143,7 +128,6 @@ h2::first-letter {
 @media (max-width: 920px) {
     .navbar {
         justify-content: center;
-        padding: 16px;
     }
 
     .nav-sections, .nav-icons {
@@ -154,20 +138,20 @@ h2::first-letter {
         text-align: center;
         padding-top: 100px;
         padding-left: 0;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
     }
 
     .product {
-        width: 60%;
+        width: 50%;
     }
 
     .product-img-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .product-info {
-        font-size: 1.2rem;
+        padding-top: 32px;
     }
 
     .footer {
@@ -186,4 +170,37 @@ h2::first-letter {
     
 
 }
+
+@media (max-width: 680px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .product {
+        width: 75%;
+    }
+
+    .product-info {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 25px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product-info {
+        font-size: 0.8rem;
+    }
+
+
+
+}
+
+
 
